@@ -32,8 +32,9 @@ class Test(unittest.TestCase):
     def test_screenshot_with_lookup_vido(self):
         screenshot=ScreenshotPage.screenshot_page(self.driver)
         screenshot.click_sreccsshot_loc()
-        self.driver.find_element_by_id('com.uniview.app.smb.phone.en.ezview:id/port_look_up').click()
-        self.driver.find_element_by_id('com.uniview.app.smb.phone.en.ezview:id/file_ll_view_back').click()      
+        screenshot.click_lookup_video()
+        screenshot.click_back_loc() 
+        print("查看图片成功")  
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     suite=unittest.TestSuite()

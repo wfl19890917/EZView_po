@@ -7,7 +7,7 @@ import unittest
 from selenium import webdriver
 from appium import webdriver
 from Public import driver
-from PO import AddPage
+from PO import AddvideoPage
 from selenium.webdriver.common.by import By
 import time
 from appium.webdriver.common.touch_action import TouchAction
@@ -18,7 +18,7 @@ class Test(unittest.TestCase):
         self.driver.quit()
     def test_add_video(self):
         for i in range(0,4):
-            add_video=AddPage.living_page(self.driver)
+            add_video=AddvideoPage.living_page(self.driver)
             add_video.click_add_video_loc(i)
             add_video.click_ezview_demo_loc(0)
             add_video.click_camera_loc(i)
@@ -49,7 +49,7 @@ class Test(unittest.TestCase):
         time.sleep(5)
         print('删除视频成功')
     def test_revoke_video(self):
-        revoke_video=AddPage.living_page(self.driver)
+        revoke_video=AddvideoPage.living_page(self.driver)
         revoke_video.click_rovoke_video_loc()           
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']

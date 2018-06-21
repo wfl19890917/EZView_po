@@ -18,11 +18,17 @@ class base_page(object):
             print('%s页面未找到元素%s'%(self.driver,loc))
     def find_elements(self,*loc):
         try:
-            WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(loc))
+            WebDriverWait(self.driver,10).until(EC.visibility_of_all_elements_located(loc))
             f=self.driver.find_elements(*loc)
             return f
         except Exception as e:
             raise e
+    #重写元素定位的方法
+    def find_elemente(self,loc):
+        try:
+            return self.driver.find_element_by_id(loc)
+        except Exception as e:
+            print("未找到%s"%(self,loc))
         
             
     
