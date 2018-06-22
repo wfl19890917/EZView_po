@@ -46,10 +46,10 @@ class menu_page(BasePage.base_page):
         self.find_element(*self.configure_loc).click()
     def click_help(self):
         self.find_element(*self.help_loc).click()
-def menu(self):
-    account=menu_page(self.driver)
-    account.click_menbtn()
-    account.click_rentou()
+
+        
+    
+    
     
         
         
